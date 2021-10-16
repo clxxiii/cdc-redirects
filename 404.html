@@ -45,6 +45,7 @@
       transform: translate(-50%, -50%);
       height: 50vh;
       width: 50vw;
+      animation: blur 1s linear;
     }
 
     @keyframes slide{
@@ -63,6 +64,18 @@
       }
       100% {
         filter: hue-rotate(360deg);
+      }
+    }
+
+    @keyframes blur {
+      0% {
+        filter: blur(200px)
+      }
+      90% {
+        filter: blur(10px)
+      }
+      100% {
+        filter: blur(0px)
       }
     }
   </style>
