@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <head>
   <title>Whoops...</title>
   <link rel="icon" href="src/img/icon.png"></link>
@@ -5,19 +6,72 @@
     @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@600&display=swap');
 
     html {
+      overflow: hidden;
       margin: 0;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
       text-align: center;
-      background-color: #3B496B;
+      background-color: #151727;
       color: #666666;
       font-size: 48px;
       font-family: 'Libre Franklin';
     }
+    .background-color {
+      position: absolute;
+      background-color: #3B496B;
+      animation: rainbow 3s linear infinite;
+      transform: scale(1.1);
+      height: 100vh;
+      width: 100vw;
+    }
+    .wrapper {
+      overflow: hidden;
+      height: 97.5vh;
+    }
+
+    .sliding-background {
+      background: url("https://i.imgur.com/yGY6rSV.png");
+      height: 3840px;
+      width: 3840px;
+      right: 0px;
+      background-repeat: repeat-x;
+      animation: slide 5s linear infinite;
+    }
+    .elements {
+      background: url("src/img/404.png") no-repeat;
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 50vh;
+      width: 50vw;
+    }
+
+    @keyframes slide{
+      0% {
+        transform: translate3d(-128px, 0, 0);
+      }
+      100% {
+        transform: translate3d(0, -128px, 0);
+      }
+    }
+
+
+    @keyframes rainbow {
+      0% {
+        filter: hue-rotate(0deg);
+      }
+      100% {
+        filter: hue-rotate(360deg);
+      }
+    }
   </style>
 </head>
 <body>
-  <img src="src/img/404.png"></img>
+  <div class="background-color"></div>
+  <div class="wrapper">
+    <div class="sliding-background"></div>
+  </div>
+  <div class="elements">
+  </div>
 </body>
