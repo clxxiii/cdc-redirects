@@ -16,6 +16,28 @@ body {
   align-items: center;
   gap: 30px;
 }
+
+.wrapper {
+  overflow: hidden;
+  height: 97.5vh;
+  /* transform: scale(2); */
+}
+
+.sliding-background {
+  background: url("https://i.imgur.com/yGY6rSV.png");
+  height: 3840px;
+  width: 3840px;
+  right: 0px;
+  background-repeat: repeat-x;
+  animation: slide 5s linear infinite;
+}
+.elements {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transition: 0.5s ease-in-out;
+}
+
 button {
   border: 0;
   border-radius: 25px;
@@ -29,6 +51,7 @@ button {
   font-size: 200%;
   cursor: pointer;
   transition: 0.3s ease-in-out;
+  animation: rainbow 3s infinite;
 }
 
 img.banner {
@@ -48,4 +71,23 @@ button:hover {
 button:active {
   transform: scale(0.98) translateY(10px);
   transition: 0.1s
+}
+
+@keyframes slide{
+  0% {
+    transform: translate3d(-128px, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, -128px, 0);
+  }
+}
+
+
+@keyframes rainbow {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
 }

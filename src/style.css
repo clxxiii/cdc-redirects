@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 html {
-  background: #202225
+  background: #202225;
 }
 body {
   filter: opacity(0%);
@@ -15,7 +15,7 @@ body {
 }
 button {
   margin:auto;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   border: 0;
   border-radius: 10px;
   background: #151727;
@@ -28,6 +28,7 @@ button {
   font-size: 32px;
   cursor: pointer;
   transition: 0.2s ease-in-out;
+  animation: rainbow 3s infinite;
 }
 
 img.banner {
@@ -47,4 +48,44 @@ button:hover {
 button:active {
   transform: scale(0.98) translateY(5px);
   transition: 0.1s
+}
+
+.wrapper {
+  overflow: hidden;
+  height: 97.5vh;
+  /* transform: scale(2); */
+}
+
+.sliding-background {
+  background: url("https://i.imgur.com/yGY6rSV.png");
+  height: 3840px;
+  width: 3840px;
+  right: 0px;
+  background-repeat: repeat-x;
+  animation: slide 5s linear infinite;
+}
+.elements {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transition: 0.5s ease-in-out;
+}
+
+@keyframes slide{
+  0% {
+    transform: translate3d(-128px, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, -128px, 0);
+  }
+}
+
+
+@keyframes rainbow {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
 }

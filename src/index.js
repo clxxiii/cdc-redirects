@@ -10,8 +10,8 @@ async function onLoad() {
 }
 
 async function animateUp() {
-  document.getElementById('body').style.filter = "opacity(0%)"
-  document.getElementById('body').style.transform = "translateY(-1000px)"
+  document.getElementById('elements').style.filter = "opacity(0%)"
+  document.getElementById('elements').style.transform = "translateY(-1000px)"
 }
 
 async function sleep(ms) {

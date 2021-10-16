@@ -6,15 +6,19 @@
 <link rel="stylesheet" href="src/style.css"></link>
 </head>
 <body id="body" onload="onLoad()">
-  <img class="banner" src="src/img/banner-thin.png"></img>
-  <div class="buttonContainer">
-  <button onclick="redirect('https://osu.ppy.sh/community/forums')">Forum Post</button>
-  <button onclick="redirect('https://docs.google.com/spreadsheets/d/1oFQPj_VN5pCNPCtCSD55wXe2XmRGABGKw93_GrrVAWQ')">Main Sheet</button>
-  <button onclick="redirect('https://discord.gg/S9jxSmQkhF')">Discord</button>
-  <button onclick="redirect('https://cdc.clxxiii.dev/register')">Registration</button>
-  <button onclick="redirect('https://challonge.com/cdc2021')">Challonge</button>
-  <button onclick="redirect('https://twitch.tv/clxxiiis_tournaments')">Twitch</button>
+  <div class="wrapper">
+  <div class="sliding-background"></div>
   </div>
-
+    <div class="elements" id="elements">
+    <img class="banner" src="src/img/banner-thin.png"></img>
+    <div class="buttonContainer">
+      <button onclick="redirect('https://osu.ppy.sh/community/forums')">Forum Post</button>
+      <button onclick="redirect('https://docs.google.com/spreadsheets/d/1oFQPj_VN5pCNPCtCSD55wXe2XmRGABGKw93_GrrVAWQ')">Main Sheet</button>
+      <button onclick="redirect('https://discord.gg/S9jxSmQkhF')">Discord</button>
+      <button onclick="redirect('https://cdc.clxxiii.dev/register')">Registration</button>
+      <button onclick="redirect('https://challonge.com/cdc2021')">Challonge</button>
+      <button onclick="redirect('https://twitch.tv/clxxiiis_tournaments')">Twitch</button>
+    </div>
+  </div>
   <script src="src/index.js"></script>
 </body>
