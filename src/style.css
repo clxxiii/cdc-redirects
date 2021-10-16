@@ -2,6 +2,7 @@
 
 html {
   background: #202225;
+  overflow-x: hidden;
 }
 body {
   filter: opacity(0%);
@@ -52,8 +53,8 @@ button:active {
 
 .wrapper {
   overflow: hidden;
-  height: 97.5vh;
-  /* transform: scale(2); */
+  height: 111vh;
+  transform: scale(1.1)
 }
 
 .sliding-background {
@@ -61,7 +62,7 @@ button:active {
   height: 3840px;
   width: 3840px;
   right: 0px;
-  background-repeat: repeat-x;
+  background-repeat: repeat;
   animation: slide 5s linear infinite;
 }
 .elements {
