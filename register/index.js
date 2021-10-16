@@ -5,3 +5,8 @@ function player() {
 function staff() {
   window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSeC2ZO_nPfC2AX1zC3G5EXwDC2GksOi56DUNw30jCIPSVvZnQ/viewform?usp=sf_link"
 }
+
+function onLoad() {
+  document.getElementById('body').style.filter = "opacity(100%)"
+  document.getElementById('body').style.transform = "translateY(0px)"
+}
