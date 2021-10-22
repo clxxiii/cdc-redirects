@@ -48,6 +48,15 @@ html {
   font-family: 'Raleway';
 }
 
+li.round-format {
+  margin: 10px;
+  font-size: 24px;
+}
+.round-format-box {
+  text-align: right;
+  width: fit-content;
+}
+
 .size150 {
   font-size: 24px
 }
