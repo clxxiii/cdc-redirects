@@ -28,7 +28,7 @@ html {
   width: 3840px;
   right: 0px;
   background-repeat: repeat-x;
-  animation: slide 5s linear infinite;
+  animation: slide 2s linear infinite;
 }
 .elements {
   position: absolute;
