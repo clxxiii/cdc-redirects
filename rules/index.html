@@ -6,9 +6,10 @@
 <link rel="stylesheet" href="style.css"></link>
 </head>
 <body id="body" onload="onLoad()">
-  <div class="wrapper">
+  <div class="background-wrapper">
     <div class="sliding-background"></div>
   </div>
+  <div id="wrapper">
   <div class="elements" id="elements">
     <div class="rule-container">
       <img class="banner" src="src/banner-thin.png"></img>
@@ -45,7 +46,7 @@
       <li> Starting from NM1, players will play each map once in the qualifier pool.</li>
       <li> If a player disconnects, they will have a chance to replay the maps they missed at the end of the lobby.</li>
       <li> After each map has been played, the player's <i>map rating</i> will be calculated using the following formula:</li>
-      <img style="border-radius: 25pc;width: 75%;margin: 10px auto;display: block;" src="https://i.imgur.com/vtBKPFe.png"></img>
+      <img style="border-radius: 25pc;width: 50%;margin: 10px;display: block;" src="https://i.imgur.com/vtBKPFe.png"></img>
       <li> Each player's map ratings will be added together to get their final rating, and players will be sorted into tiers for the drafting phase.</li>
       </ul>
 
@@ -86,15 +87,15 @@
       <span class="size150">
       <ul style="list-style-type: none;">
       <li> End of Registration: <b>December 10th</b>
-      <li> Qualifier Lobbies: <b>December 17th - December 20th</b>
+      <li> Qualifier Lobbies: <b>December 17th - December 20th</b> <div class="pool">3NM, 2HD, 2HR, 2DT; One Playthrough</div>
       <li> Scouting Phase + Holiday Break: <b>December 20th - January 2nd</b>
       <li> Draft Event: <b>January 2nd</b>
-      <li> Round of 32: <b>January 7th - January 9th</b>
-      <li> Round of 15: <b>December 10th</b>
-      <li> Quarterfinals: <b>December 10th</b>
-      <li> Semifinals: <b>December 10th</b>
-      <li> Finals: <b>December 10th</b>
-      <li> Grand Finals: <b>December 10th</b>
+      <li> Round of 32: <b>January 7th - January 9th</b> <div class="pool">5NM, 2HD, 2HR, 2DT, 2FM, 1TB; BO9</div>
+      <li> Round of 16: <b>January 14th - January 16th</b> <div class="pool">5NM, 2HD, 2HR, 3DT, 3FM, 1TB; BO9</div>
+      <li> Quarterfinals: <b>January 21st - January 23td</b> <div class="pool">5NM, 3HD, 3HR, 3DT, 3FM, 1TB; BO9</div>
+      <li> Semifinals: <b>January 28th - January 30th</b> <div class="pool">6NM, 3HD, 3HR, 3DT, 3FM, 1TB; BO11</div>
+      <li> Finals: <b>February 4th - February 6th</b> <div class="pool">6NM, 3HD, 3HR, 4DT, 3FM, 1TB; BO11</div>
+      <li> Grand Finals: <b>February 11th - February 13th</b> <div class="pool">6NM, 3HD, 3HR, 4DT, 3FM, 1TB; BO13</div>
       </ul>
       </span>
       <img class="forum-image" src="https://i.imgur.com/CvnPMi5.png"></img>
@@ -109,5 +110,7 @@
     <div class="buttonContainer">
       <button onclick="redirect('https://cdc.clxxiii.dev')">Back to Link Tree</button>
     </div>
+    </div>
+  </div>
   <script src="index.js"></script>
 </body>

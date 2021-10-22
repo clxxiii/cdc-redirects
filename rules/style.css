@@ -3,7 +3,8 @@
 html {
   background: #202225
 }
-body {
+
+#wrapper {
   filter: opacity(0%);
   transition: 0.5s ease-in-out;
   transform: translateY(50px);
@@ -17,9 +18,23 @@ body {
   margin-bottom: 100px;
 }
 
-.wrapper {
+.background-wrapper {
+  position: fixed;
   overflow: hidden;
-  height: 430vh;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.sliding-background {
+  top: 0;
+  left: 0;
+  background: url("https://i.imgur.com/yGY6rSV.png");
+  height: 3840px;
+  width: 3840px;
+  background-repeat: repeat;
+  animation: slide 5s linear infinite;
 }
 
 .rule-container {
@@ -47,14 +62,7 @@ img.forum-image {
 .center {
   text-align: center;
 }
-.sliding-background {
-  background: url("https://i.imgur.com/yGY6rSV.png");
-  height: 3840px;
-  width: 3840px;
-  right: 0px;
-  background-repeat: repeat;
-  animation: slide 5s linear infinite;
-}
+
 .elements {
   position: absolute;
   top: 0px;
@@ -97,6 +105,16 @@ button:active {
   transition: 0.1s
 }
 
+.pool {
+  width: fit-content;
+  margin: 10px;
+  font-size: 16px;
+  vertical-align: middle;
+  background: #202225;
+  padding: 6px;
+  font-weight: bold;
+  border-radius: 6px;
+}
 @keyframes slide{
   0% {
     transform: translate3d(-128px, 0, 0);

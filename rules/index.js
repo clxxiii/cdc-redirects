@@ -5,8 +5,8 @@ async function redirect(url) {
 }
 
 async function onLoad() {
-  document.getElementById('body').style.filter = "opacity(100%)"
-  document.getElementById('body').style.transform = "translateY(0px)"
+  document.getElementById('wrapper').style.filter = "opacity(100%)"
+  document.getElementById('wrapper').style.transform = "translateY(0px)"
 }
 
 async function animateUp() {
