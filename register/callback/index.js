@@ -3,7 +3,7 @@ const urlParams = new URLSearchParams(queryString);
 
 async function onLoad() {
   const url = new URL(
-    "https://osu.ppy.sh/oauth/token"
+    "https://830vj7s4y4.execute-api.us-east-2.amazonaws.com/oauth/token"
 );
 
 let headers = {
@@ -15,7 +15,7 @@ let body = {
     "client_id": 10489,
     "code": urlParams.get('code'),
     "grant_type": "authorization_code",
-    "redirect_uri": "http:\/\/localhost:4000"
+    "redirect_uri": "https://cdc.clxxiii.dev/register"
 }
 
 fetch(url, {
