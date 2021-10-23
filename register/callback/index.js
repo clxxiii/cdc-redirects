@@ -13,7 +13,7 @@ let headers = {
 
 let body = {
     "client_id": 10489,
-    "code": urlPaams.get('code');
+    "code": urlPaams.get('code'),
     "grant_type": "authorization_code",
     "redirect_uri": "http:\/\/localhost:4000"
 }
