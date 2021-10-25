@@ -12,12 +12,10 @@ let headers = {
 };
 
 let body = {
-    "client_id": 10489,
     "code": urlParams.get('code'),
-    "grant_type": "authorization_code",
-    "redirect_uri": "https://cdc.clxxiii.dev/register"
 }
 
+console.log(urlParams.get('code'))
 fetch(url, {
     method: "POST",
     headers,
