@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+<title>CLXXIII's Draft Cup Registration</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="icon" href="src/icon.png"></link>
+<link rel="stylesheet" href="src/style.css"></link>
+</head>
+<body id="body" onload="onLoad()">
+  <div class="background-wrapper">
+    <div class="sliding-background"></div>
+  </div>
+  <div id="too-early"><h2>You're too early!</h2><br>Registrations begin December 10th, at 0 UTC</div>
+  <div id="wrapper">
+  <div class="elements" id="elements">
+    <img class="banner" src="src/banner-thin.png"></img>
+    <form id="test-form">
+      <div class="form-field">
+        <label>User ID/Profile</label><br>
+        <input type="textarea" name="profile" placeholder="https://osu.ppy.sh/users/10962678" required/>
+      </div>
+      <div class="form-field">
+        <label>Your Discord ID</label><br>
+        <input type="textarea" name="discord" placeholder="clxxiii#8958" required/>
+      </div>
+      <div class="form-field">
+        <label>Time Range</label><br>
+        <input type="textarea" name="timerange" placeholder="16 - 20 UTC, Saturdays & Sundays" required/>
+      </div>
+      <div class="form-field">
+        <label>Timezone</label><br>
+        <input type="textarea" name="timezone" placeholder="UTC-4" required/>
+      </div>
+        <button type="submit" id="submit-form" class="closed">Submit</button>
+    </form>
+</div>
+
+  </div>
+  <script src="src/index.js"></script>
+</body>
