@@ -30,7 +30,7 @@ function sendAlerts() {
     alertBox.innerHTML = "Your player registration was successful, Good Luck!"
   }
   else if (alert == "staff-register") {
-    alertBox.innerHTML = "Your staff registration was successful, Thanks for your help!"
+    alertBox.innerHTML = "You will be contacted on discord if your application is accepted. Thanks for applying!"
   }
   else if (alert == null) {
     alertBox.style.filter = "opacity(0)"
