@@ -80,7 +80,8 @@ async function sendStaffRequest() {
   ]
 }
 
-sendPayload(body, "https://6t94885gfa.execute-api.us-east-2.amazonaws.com/cdc-staff-webhook")
+await sendPayload(body, "https://6t94885gfa.execute-api.us-east-2.amazonaws.com/cdc-staff-webhook");
+window.location.href = "https://cdc.clxxiii.dev/?alert=staff-register"
 }
 
 async function sendPayload(p, url) {
