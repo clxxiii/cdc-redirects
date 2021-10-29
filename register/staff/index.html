@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+<title>CLXXIII's Draft Cup Registration</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="icon" href="src/icon.png"></link>
+<link rel="stylesheet" href="src/style.css"></link>
+</head>
+<body id="body" onload="onLoad()">
+  <div class="background-wrapper">
+    <div class="sliding-background"></div>
+  </div>
+  <div id="wrapper">
+  <div class="elements" id="elements">
+    <img class="banner" src="src/banner-thin.png"></img>
+    <div id="test-form">
+      <div class="form-field">
+        <label>Your osu! User ID</label><br>
+        <input type="textarea" id="form_id" placeholder="10962678" required/>
+      </div>
+      <div class="form-field">
+        <label>Your Discord ID</label><br>
+        <input type="textarea" id="form_discord" placeholder="clxxiii#8958" required/>
+      </div>
+      <div class="form-field">
+        <label>What roles would you like to assume?</label><br>
+        <input type="textarea" id="form_roles" placeholder="Referee, Commentator, Mappooler and/or Streamer" required/>
+      </div>
+      <div class="form-field">
+        <label>What experience do you have with staff?</label><br>
+        <input type="textarea" id="form_experience" required/>
+      </div>
+        <button class="closed" onclick="sendStaffRequest()">Submit</button>
+    </div>
+</div>
+
+  </div>
+  <script src="src/index.js"></script>
+</body>
