@@ -54,7 +54,8 @@ form#test-form {
   }
 }
 
-#too-early {
+#wrong-time-window {
+  font-weight: normal;
   text-align: center;
   filter: opacity(0%);
   height: 0px;

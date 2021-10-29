@@ -2,17 +2,20 @@ const tx = document.getElementsByTagName("input");
 
 function onLoad() {
   let date = new Date();
-  let startDate = new Date();
-  startDate = setStartDate(startDate);;
+  let startDate = setStartDate();
+  let endDate = setEndDate();
 
-  if (date.getTime() > startDate.getTime() ) {
-    document.getElementById('wrapper').style.filter = "opacity(100%)";
-    document.getElementById('wrapper').style.transform = "translateY(0px)";
+  if (date.getTime() < startDate.getTime() || date.getTime() > endDate.getTime()) {
+    document.getElementById('wrong-time-window').style.filter = "opacity(100%)"
+    document.getElementById('wrapper').style.transform = "scale(0)";
+    document.getElementsByTagName('html')[0].style.overflow = "hidden";
+    if (date.getTime() > endDate.getTime()) {
+      document.getElementById('wrong-time-window').innerHTML = "<h2>Oh no! Registrations have closed</h2><br>sorry :("
+    }
   }
   else {
-    document.getElementById('too-early').style.filter = "opacity(100%)"
-    document.getElementById('wrapper').style.transform = "scale(0)";
-    document.getElementsByTagName('html')[0].style.overflow = "hidden"
+    document.getElementById('wrapper').style.filter = "opacity(100%)";
+    document.getElementById('wrapper').style.transform = "translateY(0px)";
   }
 
   for (let i = 0; i < tx.length; i++) {
@@ -51,15 +54,28 @@ async function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms))
 }
 
-function setStartDate(startDate) {
+function setStartDate() {
+  let startDate = new Date()
   startDate.setUTCFullYear(2021);
-  startDate.setUTCMonth(11);
-  startDate.setUTCDate(10);
+  startDate.setUTCMonth(10);
+  startDate.setUTCDate(18);
   startDate.setUTCHours(0);
   startDate.setUTCMinutes(0);
   startDate.setUTCSeconds(0);
 
   return startDate;
+}
+
+function setEndDate() {
+  let endDate = new Date()
+  endDate.setUTCFullYear(2021);
+  endDate.setUTCMonth(11);
+  endDate.setUTCDate(10);
+  endDate.setUTCHours(0);
+  endDate.setUTCMinutes(0);
+  endDate.setUTCSeconds(0);
+
+  return endDate;
 }
 
 $.fn.serializeObject = function()
