@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Nunito+Sans:ital,wght@0,200;0,400;1,200;1,400&family=Nunito:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&family=Rubik:wght@400;500&family=Space+Mono&display=swap');
 
 html {
   background: #202225;
@@ -8,6 +8,9 @@ html {
 }
 
 #wrapper {
+  position: absolute;
+  top: 40px;
+  left: 0;
   filter: opacity(0%);
   transition: 0.5s ease-in-out;
   transform: translateY(50px);
@@ -55,13 +58,41 @@ form#test-form {
 }
 
 #wrong-time-window {
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
   font-weight: normal;
   text-align: center;
+  padding: 0;
+  margin: 0;
   filter: opacity(0%);
-  height: 0px;
-  font-size: 200%
+  font-size: 200%;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 
+#countdown {
+  font-family: 'Major Mono Display';
+  font-weight: 800;
+  font-size: 300%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px
+}
+
+.countdown-text {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
 img.banner {
   display: block;
   margin-left: auto;

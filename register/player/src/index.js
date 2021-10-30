@@ -1,21 +1,23 @@
 const tx = document.getElementsByTagName("input");
+const date = new Date();
+const startDate = new Date("Nov 19, 2021 00:00:00 UTC");
+const endDate = new Date("Dec 10, 2021 23:59:59 UTC");
 
 function onLoad() {
-  let date = new Date();
-  let startDate = setStartDate();
-  let endDate = setEndDate();
 
   if (date.getTime() < startDate.getTime() || date.getTime() > endDate.getTime()) {
     document.getElementById('wrong-time-window').style.filter = "opacity(100%)"
     document.getElementById('wrapper').style.transform = "scale(0)";
     document.getElementsByTagName('html')[0].style.overflow = "hidden";
     if (date.getTime() > endDate.getTime()) {
-      document.getElementById('wrong-time-window').innerHTML = "<h2>Oh no! Registrations have closed</h2><br>sorry :("
+      document.getElementById('wrong-time-window').innerHTML = "<h1>Oh no!</h1>Registrations have closed. sorry :("
+      clearInterval(x)
     }
   }
   else {
     document.getElementById('wrapper').style.filter = "opacity(100%)";
     document.getElementById('wrapper').style.transform = "translateY(0px)";
+    document.getElementById('wrong-time-window').style.visibility = "hidden"
   }
 
   for (let i = 0; i < tx.length; i++) {
@@ -52,30 +54,6 @@ function areAllFieldsComplete() {
 }
 async function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms))
-}
-
-function setStartDate() {
-  let startDate = new Date()
-  startDate.setUTCFullYear(2021);
-  startDate.setUTCMonth(10);
-  startDate.setUTCDate(18);
-  startDate.setUTCHours(0);
-  startDate.setUTCMinutes(0);
-  startDate.setUTCSeconds(0);
-
-  return startDate;
-}
-
-function setEndDate() {
-  let endDate = new Date()
-  endDate.setUTCFullYear(2021);
-  endDate.setUTCMonth(11);
-  endDate.setUTCDate(10);
-  endDate.setUTCHours(0);
-  endDate.setUTCMinutes(0);
-  endDate.setUTCSeconds(0);
-
-  return endDate;
 }
 
 $.fn.serializeObject = function()
