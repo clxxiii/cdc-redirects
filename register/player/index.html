@@ -24,6 +24,11 @@
   <div class="elements" id="elements">
     <img class="banner" src="src/banner-thin.png"></img>
     <form id="test-form">
+      <div class="section-header">
+        <h1>Signup Info</h1>
+        This info will be passed onto spreadsheet formulas that do not like errors.<br>
+        Make sure you get these fields correct!
+      </div>
       <div class="form-field">
         <label>User ID/Profile</label><br>
         <input type="textarea" name="profile" placeholder="https://osu.ppy.sh/users/10962678" required/>
@@ -32,19 +37,38 @@
         <label>Your Discord ID</label><br>
         <input type="textarea" name="discord" placeholder="clxxiii#8958" required/>
       </div>
+      <div class="section-header">
+      <h1>Drafting Info</h1>
+      This information will be used by captains that are looking for players,<br>
+       so please take it seriously.<br>
+       <br>
+       And if you'd like to update at any time, let me know!
+      </div>
       <div class="form-field">
         <label>Time Range</label><br>
         <input type="textarea" name="timerange" placeholder="Please at least 4 hours total. e.g. 2-4 UTC Saturday, 16-18 UTC Sunday" required/>
-      </div>
+      </div class="draft-header">
       <div class="form-field">
         <label>Timezone</label><br>
         <input type="textarea" name="timezone" placeholder="UTC-4" required/>
       </div>
-        <button type="submit" id="submit-form" class="closed">Submit</button>
+      <div class="form-field">
+        <label>Tell the captains a little about yourself as a player!</label><br>
+        <input type="textarea" name="general_info" placeholder="I've been playing the game for 4 years, but I'm new to the tournament scene!" required/>
+      </div>
+      <div class="form-field">
+        <label>What strengths do you have as a player?</label><br>
+        <input type="textarea" name="strengths" placeholder="Aim, Alt, Streams" required/>
+      </div>
+      <div class="form-field">
+        <label>What weaknesses do you have as a player?</label><br>
+        <input type="textarea" name="weaknesses" placeholder="Low AR HD, Speed, Gimmicky Stuff" required/>
+      </div>
+      <button type="submit" id="submit-form" class="closed">Submit</button>
     </form>
-</div>
+  </div>
 
   </div>
-  <script src="https://cdc.clxxiii.dev/register/player/src/index.js"></script>
+  <script src="src/index.js"></script>
   <script src="src/countdown.js"></script>
 </body>
