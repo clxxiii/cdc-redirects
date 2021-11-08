@@ -12,14 +12,22 @@ let headers = {
 };
 
 let body = {
-    "code": urlParams.get('code'),
+    // code: urlParams.get('code'),
+    client_id: 10489,
+    client_secret: "2QGibWe3PUJ99S6N7Zxb0FwrZ0OWvKQcSP16iuiE",
+    grant_type: "client_credentials",
+    scope: "public"
+    // redirect_uri: 'https://cdc.clxxiii.dev/register'
 }
 
-console.log(urlParams.get('code'))
-fetch(url, {
+// console.log(urlParams.get('code'))
+let response = await fetch(url, {
     method: "POST",
     headers,
     body: JSON.stringify(body),
-}).then(response => response.json())
-.then(response => console.log(response));
+})
+response = await response.json()
+
+let access_token = response.access_token;
+console.log(response);
 }
