@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Nunito+Sans:ital,wght@0,200;0,400;1,200;1,400&family=Nunito:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&family=Rubik:wght@400;500&family=Space+Mono&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #00111A;
+    height: 1080px;
+    width: 1920px;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    overflow: visible;
+    transform: rotate(45deg)
+}
+
+.bg-1, .bg-2, .bg-3 {
+    position: absolute;
+    top: 0;
+    height: 3840px;
+    width: 3840px;
+    background-size: cover;
+    filter: drop-shadow(100px);
+    transition: 1500ms ease-in-out;
+    z-index: 4;
+}
+
+.bg-1 {
+    left: -142px;
+    background-image: url(/static/bg1.png);
+    animation: 5s slide linear infinite reverse;
+}
+
+.bg-2 {
+    left: 20px;
+    background-image: url(/static/bg2.png);
+    animation: 2.5s slide linear infinite reverse;
+}
+
+.bg-3 {
+    left: 175px;
+    background-image: url(/static/bg3.png);
+    animation: 5s slide linear infinite;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateY(-50%)
+    }
+
+    100% {
+        transform: translateY(-25%)
+    }
+}
+
+@keyframes spin {
+    from {
+        transofrm: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+.title {
+  font-family: 'Raleway';
+}
+
+#countdown {
+  font-family: 'Major Mono Display';
+  font-size: 125%;
+  display: flex;
+  justify-content: center;
+}
+
+.countdown-text {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.text-container {
+  position: absolute;
+  height: 1080px;
+  width: 1920px;
+  color: white;
+  font-weight: 800;
+  font-size:  128px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  gap: 100px;
+  transform-origin: center;
+}
+
+.showtime {
+    left: 1920;
+}
+
+div.img {
+  background: url("https://clxxiii.dev/tournament/src/icon.png");
+  background-size: cover;
+  width: 800px;
+  height: 800px;
+  position: absolute;
+  transition: 1s ease-in-out;
+  filter: opacity(0.3);
+  z-index: 0;
+}
+
+.img-container {
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 1920px;
+    height: 1080px;
+}
+
+@keyframes slideleft {
+    0% {
+        transform: translate(0, 0) rotate(0deg)
+    }
+    25% {
+        transform: translate(10%, 0) rotate(5deg)
+    }
+    75% {
+        transform: translate(-110%, 0) rotate(5deg)
+    }
+    100% {
+        transform: translate(-100%, 0) rotate(0deg)
+    }
+}
