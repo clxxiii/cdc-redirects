@@ -35,19 +35,19 @@
 
 .bg-1 {
     left: -142px;
-    background-image: url(/static/bg1.png);
+    background-image: url(static/bg1.png);
     animation: 5s slide linear infinite reverse;
 }
 
 .bg-2 {
     left: 20px;
-    background-image: url(/static/bg2.png);
+    background-image: url(static/bg2.png);
     animation: 2.5s slide linear infinite reverse;
 }
 
 .bg-3 {
     left: 175px;
-    background-image: url(/static/bg3.png);
+    background-image: url(static/bg3.png);
     animation: 5s slide linear infinite;
 }
 
