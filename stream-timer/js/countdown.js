@@ -10,7 +10,7 @@ var countDownDate = new Date(dateString).getTime();
 // Replace showtime screen with error message if no date provided
 if(dateString == null) {
   var mins10 = new Date(new Date().getTime() + 10*60000 + 2*1000);
-  window.location.search = "?time=" + mins10.toLocaleString();
+  window.location.search = "?time=" + mins10.toISOString();
 }
 
 // Update the count down every 1 second
