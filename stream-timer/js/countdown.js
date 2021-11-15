@@ -18,9 +18,9 @@ var x = setInterval(function() {
   // Define html elements
   let minutes = document.getElementById("minutes");
   let seconds = document.getElementById("seconds");
+  let colon = document.getElementById("colon");
   let textContainers = document.getElementsByClassName("text-container");
-  let bg = document.getElementsByClassName("bg");
-  let showtime = document.getElementsByClassName("showtime")[0].getElementsByClassName("title")[0];
+  let img = document.getElementsByClassName("img")[0];
   
   // Get today's date and time
   var now = new Date().getTime();
@@ -39,11 +39,31 @@ var x = setInterval(function() {
     minutes.innerHTML = minutesText
     seconds.innerHTML = secondsText
   }
+
+  // slowly unblur tournament icon as timer runs down
+  img.style.filter = "opacity(0.3) blur(" + distance / 1000 + "px)"
+
+  // Remove minutes section if 0 minutes
+  if (minutesText == 0) {
+    minutes.style.width = 0;
+    colon.style.width = 0;
+    minutes.style.opacity = 0;
+    colon.style.opacity = 0;
+  } else {
+    minutes.style.width = "";
+    colon.style.width = "";
+    minutes.style.opacity = 1;
+    colon.style.opacity = 1;
+  }
+
+
   // If the count down is finished, do some things
   if (distance < 0) {
     minutes.innerHTML = 0
     seconds.innerHTML = 0
     
+    img.style.filter = "opacity(0.85)"
+    img.style.animation = "3s spin ease-in-out"
     for (i = 0; i < textContainers.length; i++) {
       let c = textContainers[i];
 

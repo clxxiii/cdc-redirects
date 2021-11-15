@@ -28,7 +28,6 @@
     height: 3840px;
     width: 3840px;
     background-size: cover;
-    filter: drop-shadow(100px);
     transition: 1500ms ease-in-out;
     z-index: 4;
 }
@@ -90,6 +89,10 @@
   margin-bottom: 10px;
 }
 
+#minutes, #colon {
+    transition: width 1s ease-in-out
+}
+
 .text-container {
   position: absolute;
   height: 1080px;
@@ -108,16 +111,17 @@
 
 .showtime {
     left: 1920;
+    text-shadow: 0 0 20px white;
 }
 
 div.img {
-  background: url("https://clxxiii.dev/tournament/src/icon.png");
+  background: url("static/cup.png");
   background-size: cover;
   width: 800px;
   height: 800px;
   position: absolute;
   transition: 1s ease-in-out;
-  filter: opacity(0.3);
+  filter: opacity(0.3) blur(1000px);
   z-index: 0;
 }
 
@@ -135,12 +139,27 @@ div.img {
         transform: translate(0, 0) rotate(0deg)
     }
     25% {
-        transform: translate(10%, 0) rotate(5deg)
+        transform: translate(10%, 0) rotate(1deg)
     }
     75% {
-        transform: translate(-110%, 0) rotate(5deg)
+        transform: translate(-110%, 0) rotate(1deg)
     }
     100% {
         transform: translate(-100%, 0) rotate(0deg)
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg)
+    }
+    25% {
+        transform: rotate(10deg)
+    }
+    75% {
+        transform: rotate(-370deg)
+    }
+    100% {
+        transform: rotate(-360deg)
     }
 }
