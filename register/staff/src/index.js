@@ -45,8 +45,9 @@ async function sendStaffRequest() {
   let form_roles = document.getElementById("form_roles").value;
   let form_experience = document.getElementById("form_experience").value;
   let id_image = "https://s.ppy.sh/a/" + form_id
-
-  console.log(form_id)
+  let timestamp = new Date().toISOString();
+  
+  console.log(timestamp)
   let body = {
   "username": "Staff Regs",
   "avatar_url": "https://cdc.clxxiii.dev/src/img/icon.png",
@@ -55,6 +56,7 @@ async function sendStaffRequest() {
       "title": "Someone just applied for staff!",
       "description": "Using the form on the website, someone just sent in a form!",
       "color": 11274124,
+      "timestamp": timestamp,
       "thumbnail": {
         "url": id_image
       },
