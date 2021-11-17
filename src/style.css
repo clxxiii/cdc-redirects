@@ -112,9 +112,16 @@ img.banner {
 }
 .elements {
   position: absolute;
+  display: flex;
+  flex-direction: column;
   top: 0px;
   left: 0px;
   transition: 0.5s ease-in-out;
+  align-items: center;
+}
+
+.btn-container {
+  margin-top: 50px;
 }
 
 @keyframes slide{
