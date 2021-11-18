@@ -1,6 +1,6 @@
 const tx = document.getElementsByTagName("input");
 const date = new Date();
-const startDate = new Date("Nov 19, 2021 00:00:00 UTC");
+const startDate = new Date("Nov 18, 2021 23:00:00 UTC");
 const endDate = new Date("Dec 10, 2021 23:59:59 UTC");
 
 function onLoad() {
