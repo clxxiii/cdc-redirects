@@ -106,3 +106,7 @@ section, section div {
     top: 5px;
     font-size: 125%;
 }
+
+.stats div {
+    text-align: left;
+}
