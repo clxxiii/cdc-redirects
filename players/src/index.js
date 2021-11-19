@@ -11,6 +11,6 @@ async function onLoad() {
     // buildPlayerContainers(tier2, response.tier2);
     // buildPlayerContainers(tier3, response.tier3);
     // buildPlayerContainers(tier4, response.tier4);
-    buildPlayerContainers(parse, response.parse);
+    buildPlayerContainers(parse, response.playerlist);
 
 }
