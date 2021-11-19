@@ -30,7 +30,7 @@ function onLoad() {
 // Test if any or all text areas are blank
 function OnInput() {
   if( !areAllFieldsComplete() ) {
-    document.getElementsByTagName("button")[0].classList.add("closed")
+    document.getElementById("submit").classList.add("closed")
   }
 
   if (this.value == "") {
@@ -40,11 +40,18 @@ function OnInput() {
     this.classList.remove("empty");
     console.log(areAllFieldsComplete())
     if( areAllFieldsComplete() ) {
-      document.getElementsByTagName("button")[0].classList.remove("closed")
+      document.getElementById("submit").classList.remove("closed")
     }
   }
 }
 
+
+// loading image on button so people don't click it twice
+function onClickSubmit() {
+  document.getElementById("loading").style.visibility = "visible";
+  document.getElementById("submit-form").style.visibility = "hidden";
+  document.getElementById("submit").classList.add("on-click");
+}
 // Return true if the user has inputted a value for each field
 function areAllFieldsComplete() {
   for (let i = 0; i < tx.length; i++) {
@@ -58,19 +65,19 @@ async function sleep(ms) {
 
 $.fn.serializeObject = function()
 {
-   var o = {};
-   var a = this.serializeArray();
-   $.each(a, function() {
-       if (o[this.name]) {
-           if (!o[this.name].push) {
-               o[this.name] = [o[this.name]];
-           }
-           o[this.name].push(this.value || '');
-       } else {
-           o[this.name] = this.value || '';
-       }
-   });
-   return o;
+  var o = {};
+  var a = this.serializeArray();
+  $.each(a, function() {
+      if (o[this.name]) {
+          if (!o[this.name].push) {
+              o[this.name] = [o[this.name]];
+          }
+          o[this.name].push(this.value || '');
+      } else {
+          o[this.name] = this.value || '';
+      }
+  });
+  return o;
 };
 
 var $form = $('form#test-form'),

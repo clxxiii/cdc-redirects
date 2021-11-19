@@ -155,7 +155,11 @@ input[type="textarea"].empty::placeholder {
       color: #FFBBBB;
 }
 
-button#submit-form {
+#submit {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 0;
   border-radius: 25px;
   background-color: #151727;
@@ -163,16 +167,29 @@ button#submit-form {
   height: 5rem;
   width: 60%;
   padding-right: 2%;
-  font-family: 'Raleway';
-  font-weight: bold;
-  color: white;
-  font-size: 200%;
   cursor: pointer;
   transition: 0.3s ease-in-out;
   animation: rainbow 3s infinite;
 }
 
-button.closed {
+button {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: transparent;
+  font-family: 'Raleway';
+  font-weight: bold;
+  color: white;
+  font-size: 200%;
+}
+
+#loading {
+  position: absolute;
+  visibility: hidden;
+}
+
+.closed {
   filter: opacity(0%);
   visibility: hidden;
 }
@@ -184,4 +201,9 @@ button.closed {
   100% {
     filter: hue-rotate(360deg);
   }
+}
+
+.on-click {
+  transform: scale(0.9);
+  opacity: 0.8;
 }

@@ -64,7 +64,10 @@
         <label>What weaknesses do you have as a player?</label><br>
         <input type="textarea" name="weaknesses" placeholder="Low AR HD, Speed, Gimmicky Stuff" required/>
       </div>
-      <button type="submit" id="submit-form" class="closed">Submit</button>
+      <div id="submit" class="closed" onclick="onClickSubmit()">
+      <button type="submit" id="submit-form">Submit</button>
+      <img id="loading" src="https://tetriostats.clxxiii.dev/src/img/loading.svg">
+      </div>
     </form>
   </div>
 
