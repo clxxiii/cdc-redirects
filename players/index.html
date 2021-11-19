@@ -1,10 +1,35 @@
-<head>
+<link>
+  <link rel="stylesheet" href="../src/style.css"></link>
+  <link rel="stylesheet" href="src/profiles.css"></link>
 <head>
 <body onload="onLoad()">
-
-<script>
-  function onLoad() {
-    window.location.href = "https://docs.google.com/spreadsheets/d/1oFQPj_VN5pCNPCtCSD55wXe2XmRGABGKw93_GrrVAWQ#gid=0"
-  }
-  </script>
+    <img class="banner" src="../src/img/banner-thin.png">
+    <div class="list-container">
+      <section id="Captains">
+        <h1>Captains:</h1>
+        <div class="section-directory"></div>
+        <div class="player-list" id="tier1"><img id="loading" src="https://tetriostats.clxxiii.dev/src/img/loading.svg"></div>
+      </section>
+      <section id="Tier 2">
+        <h1>Tier 2:</h1>
+        <div class="section-directory"></div>
+        <div class="player-list" id="tier2"><img id="loading" src="https://tetriostats.clxxiii.dev/src/img/loading.svg"></div>
+      </section>
+      <section id="Tier 3">
+        <h1>Tier 3:</h1>
+        <div class="section-directory"></div>
+        <div class="player-list" id="tier3"><img id="loading" src="https://tetriostats.clxxiii.dev/src/img/loading.svg"></div>
+      </section>
+      <section id="Tier 4">
+        <h1>Tier 4:</h1>
+        <div class="section-directory"></div>
+      <div class="player-list" id="tier4"><img id="loading" src="https://tetriostats.clxxiii.dev/src/img/loading.svg"></div>
+    </section>
+  </div>
+  <div class="background-wrapper">
+    <div class="sliding-background"></div>
+  </div>
+<script src="src/index.js"></script>
+<script src="../src/createDirectory.js" onload="createDirectory()"></script>
+<script src="src/profilebuilder.js"></script>
 </body>

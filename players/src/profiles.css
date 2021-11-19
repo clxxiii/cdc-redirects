@@ -1,0 +1,105 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list-container {
+    width: 80%;
+    background-color: rgba(0,0,0,0.3);
+    padding: 10px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+}
+
+.list-container section h1 {
+    font-size: 64px;
+}
+
+.player-list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    column-gap: 5%;
+    justify-content: center;
+    font-weight: normal;
+}
+
+.profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 45%;
+    min-width: 500px;
+    font-size: 12px;
+    /* height: 200px; */
+}
+
+
+.profile .user {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.profile .user .name {
+    font-weight: bold;
+}
+
+.profile .user .rank {
+    margin-top: -3px;
+    font-size: 85%;
+}
+
+.profile .user img {
+    border-radius: 25px;
+    width: 105px;
+    height: 105px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.5);
+}
+
+.profile .description {
+    width: 75%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+
+.profile .description .quote {
+    font-size: 130%;
+}
+
+.profile .description b {
+    font-size: 130%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+section, section div {
+    text-align: center;
+}
+
+.section-directory {
+    position: relative;
+    margin-top: -40px;
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+    padding-top: 40px;
+    border-radius: 50px;
+    background-color: #45494e;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.section-directory::before {
+    content: "Section Directory";
+    position: absolute;
+    top: 5px;
+    font-size: 125%;
+}
