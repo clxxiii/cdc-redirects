@@ -3,22 +3,20 @@
 <title>CDC Rules</title>
 
 <link rel="icon" href="src/icon.png"></link>
-<link rel="stylesheet" href="style.css"></link>
+<link rel="stylesheet" href="../src/style.css"></link>
 </head>
 <body id="body" onload="onLoad()">
   <div class="background-wrapper">
     <div class="sliding-background"></div>
   </div>
   <div id="wrapper">
-  <div class="elements" id="elements">
+  <div class="rule-elements" id="elements">
     <div class="rule-container">
-      <img class="banner" src="src/banner-thin.png"></img>
-
+      <img class="rule-banner" src="src/banner-thin.png"></img>
+      <div class="section-directory"></div>
       <span class="size150" class="center">Welcome to CLXXIII's Draft Cup! A draft cup being held in the 85k - 300k range. The gimmick of this tournament being that you sign up as a single player, and <b>the top 128</b> will be drafted on to teams to play the bracket stages.</span>
-
-
       <img class="forum-image" src="https://i.imgur.com/7BYmHwT.png"></img>
-      <section id="rules">
+      <section id="Rules">
       <h1>Quick Rules Index</h1>
       <ul style="font-size: 20px;">
       <li> <b>Double Picking:</b> No (NM excluded)</li>
@@ -53,7 +51,7 @@
       <li> Each player's map ratings will be added together to get their final rating, and players will be sorted into tiers for the drafting phase.</li>
       </ul>
 
-      <section id="drafting">
+      <section id="Drafting">
       <h1>Drafting</h1>
       <ul>
       <li> <b>Using each player's final rating, the top 128 players will be sorted into four tiers.</b><ul>
@@ -76,7 +74,7 @@
       <li> The draft phase will have been completed, and captains may now rename their team if they so choose.
       </ul>
       </section>
-      <section id="match-procedure">
+      <section id="Match Procedure">
       <h1>Match Procedure</h1>
       <ul>
       <li> Teams will be notified of the match at least 15 minutes before the start of their match. <b>Captains are expected to be responsive to the ping.</b>
@@ -94,7 +92,7 @@
       <li> In the event of a disconnect, the match will be aborted if in the first 30 seconds, otherwise a screenshot of the final score must be provided to the referee. If no such screenshot can be produced, their score will not count.
       </ul>
       </section>
-      <section id="round-format">
+      <section id="Round Format">
       <h1>Round Format</h1>
       <ul style="list-style-type: none;" class="round-format-box">
         <div>
@@ -108,7 +106,7 @@
       </ul>
       </section>
       <img class="forum-image" src="https://i.imgur.com/WTNL9jM.png"></img>
-      <section class="size150" id="schedule">
+      <section class="size150" id="Schedule">
       <ul style="list-style-type: none;">
         <li> End of Registration: <b>December 10th</b>
         <li> Qualifier Lobbies: <b>December 17th - December 20th</b>
@@ -123,7 +121,7 @@
       </ul>
       </section>
       <img class="forum-image" src="https://i.imgur.com/CvnPMi5.png"></img>
-      <section class="size150" id="prizes">
+      <section class="size150" id="Prizes">
       <ul style="list-style-type: none;">
         <b>These are the current prizes, they will change according to the number of donations!</b><br><br>
         <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
@@ -135,10 +133,11 @@
       </ul>
       </section>
     </div>
-    <div class="buttonContainer">
-      <button onclick="redirect('https://cdc.clxxiii.dev')">Back to Link Tree</button>
+    <div class="ruleButtonContainer">
+      <button onclick="redirect('https://cdc.clxxiii.dev')" class="link-tree">Back to Link Tree</button>
     </div>
     </div>
   </div>
   <script src="index.js"></script>
+  <script src="../src/createDirectory.js"></script>
 </body>
