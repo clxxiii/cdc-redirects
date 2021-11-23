@@ -164,3 +164,119 @@ img.banner {
     filter: hue-rotate(360deg);
   }
 }
+
+.rule-container {
+  width: 60%;
+  background-color: #0009;
+  padding: 3vh;
+  color: white;
+  border-radius: 25px;
+  margin: auto;
+  margin-top: 2vh;
+  font-family: 'Raleway';
+}
+
+li.round-format {
+  margin: 10px;
+  font-size: 24px;
+}
+.round-format-box {
+  text-align: right;
+  width: fit-content;
+}
+
+.size150 {
+  font-size: 24px
+}
+.size85 {
+  font-size: 12px
+}
+
+img.forum-image {
+  width: 100%;
+  margin-top: 3vh;
+}
+.center {
+  text-align: center;
+}
+
+.rule-elements {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transition: 0.5s ease-in-out;
+}
+
+img.rule-banner {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 30px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.pool {
+  width: fit-content;
+  margin: 10px;
+  font-size: 16px;
+  vertical-align: middle;
+  background: #202225;
+  padding: 6px;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+button.link-tree {
+  border: 0;
+  border-radius: 25px;
+  background-color: #151727;
+  padding-left: 2%;
+  height: 100%;
+  padding-right: 2%;
+  font-family: 'Raleway';
+  font-weight: bold;
+  color: white;
+  font-size: 200%;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  animation: rainbow 3s infinite;
+}
+
+button:hover {
+  transform: translateY(10px);
+  box-shadow: 0 5px 30px #07080D;
+}
+
+button:active {
+  transform: scale(0.98) translateY(10px);
+  transition: 0.1s
+}
+
+.ruleButtonContainer {
+  display: flex;
+  margin-top: 2rem;
+  justify-content: center;
+  height: 100px;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.section-directory {
+    position: relative;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    padding-top: 40px;
+    border-radius: 50px;
+    background-color: #45494e;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.section-directory::before {
+    content: "Section Directory";
+    position: absolute;
+    top: 5px;
+    font-size: 125%;
+}

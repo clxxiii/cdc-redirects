@@ -88,25 +88,6 @@ section, section div {
     text-align: center;
 }
 
-.section-directory {
-    position: relative;
-    margin-top: -40px;
-    margin-bottom: 40px;
-    padding-bottom: 10px;
-    padding-top: 40px;
-    border-radius: 50px;
-    background-color: #45494e;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.section-directory::before {
-    content: "Section Directory";
-    position: absolute;
-    top: 5px;
-    font-size: 125%;
-}
-
 .stats div {
     text-align: left;
 }
