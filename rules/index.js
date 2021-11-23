@@ -7,6 +7,7 @@ async function redirect(url) {
 async function onLoad() {
   document.getElementById('wrapper').style.filter = "opacity(100%)"
   document.getElementById('wrapper').style.transform = "translateY(0px)"
+  createDirectory();
 }
 
 async function animateUp() {
