@@ -47,10 +47,12 @@ function OnInput() {
 
 
 // loading image on button so people don't click it twice
-function onClickSubmit() {
+async function onClickSubmit() {
   document.getElementById("loading").style.visibility = "visible";
   document.getElementById("submit-form").style.visibility = "hidden";
   document.getElementById("submit").classList.add("on-click");
+  await sleep(2000)
+  pushInfo();
 }
 // Return true if the user has inputted a value for each field
 function areAllFieldsComplete() {
@@ -83,7 +85,7 @@ $.fn.serializeObject = function()
 var $form = $('form#test-form'),
     url = 'https://script.google.com/macros/s/AKfycbx13MZUseulDBJsjPsN3j8ztnG_8lIUNwLL3uEF8rW-Mu9pX_VYf7f8lG-_mdPhbzcH/exec'
 
-$('#submit-form').on('click', function(e) {
+$('#submit-form').on('click', function pushInfo(e) {
   e.preventDefault();
   var jqxhr = $.ajax({
     url: url,
