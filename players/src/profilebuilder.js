@@ -56,6 +56,9 @@ function buildPlayerContainers(parent, data) {
         statsContainer.appendChild(weaknesses)
         infoContainer.appendChild(statsContainer);
 
+        child.addEventListener("click", function(){
+            redirect("https://osu.ppy.sh/u/" + json.id)
+        }) 
         parent.appendChild(child)
     }
 }

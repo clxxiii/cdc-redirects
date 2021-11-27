@@ -280,3 +280,15 @@ button:active {
     top: 5px;
     font-size: 125%;
 }
+
+::-webkit-scrollbar {
+  background-color: rgba(0,0,0,0);
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color:#45494e;
+  width: 4px;
+  margin-right: 5px;
+  border-radius: 10px;
+}

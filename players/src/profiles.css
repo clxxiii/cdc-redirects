@@ -24,8 +24,7 @@ body {
 .player-list {
     display: flex;
     flex-wrap: wrap;
-    row-gap: 30px;
-    column-gap: 5%;
+    gap: 30px;
     justify-content: center;
     font-weight: normal;
 }
@@ -35,9 +34,15 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 45%;
+    height: 200px;
+    border-radius: 20px;
     min-width: 500px;
+    padding: 10px;
     font-size: 12px;
+    background-color: #333333;
     /* height: 200px; */
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
 }
 
 
@@ -71,12 +76,17 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 20px;
     justify-content: space-evenly;
 }
 
 .profile .description .quote {
+    display: relative;
     font-size: 130%;
+    height: 100px;
+    overflow-y: scroll;
+    display: grid;
+    align-items: center;
+    grid-auto-flow: column;
 }
 
 .profile .description b {
@@ -90,4 +100,9 @@ section, section div {
 
 .stats div {
     text-align: left;
+}
+
+.profile:hover {
+    transform: scale(1.025);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
 }

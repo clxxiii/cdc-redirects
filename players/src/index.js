@@ -14,3 +14,7 @@ async function onLoad() {
     buildPlayerContainers(parse, response.playerlist);
 
 }
+
+function redirect(e) {
+    window.open(e);
+}
