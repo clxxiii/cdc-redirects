@@ -8,11 +8,10 @@ async function onLoad() {
     response = await response.json()
     console.log(response);
 
-    // buildPlayerContainers(tier1, response.tier1);
-    // buildPlayerContainers(tier2, response.tier2);
-    // buildPlayerContainers(tier3, response.tier3);
-    // buildPlayerContainers(tier4, response.tier4);
-    buildPlayerContainers(parse, response.playerlist);
+    buildPlayerContainers(tier1, response.tier1);
+    buildPlayerContainers(tier2, response.tier2);
+    buildPlayerContainers(tier3, response.tier3);
+    buildPlayerContainers(tier4, response.tier4);
 
 }
 
