@@ -17,6 +17,11 @@ body {
     backdrop-filter: blur(3px);
 }
 
+
+.list-container section {
+    width: 100%
+}
+
 .list-container section h1 {
     font-size: 64px;
 }
