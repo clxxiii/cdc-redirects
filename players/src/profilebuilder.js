@@ -17,6 +17,7 @@ function buildPlayerContainers(parent, data) {
         let strengths = document.createElement("div");
         let weaknesses = document.createElement("div");
         let statsContainer = document.createElement("div");
+        let seed = document.createElement("div");
         
         // Assign classes to divs
         child.classList.add("profile")
@@ -29,9 +30,11 @@ function buildPlayerContainers(parent, data) {
         weaknesses.classList.add("weaknesses")
         timerange.classList.add("timerange")
         statsContainer.classList.add("stats")
+        seed.classList.add("seed")
         
         // Assign div content to variables
         let rankText = json.rank;
+        seed.innerHTML = i + 1;
         console.log()
         img.src = "http://s.ppy.sh/a/" + json.id
         username.innerHTML = json.username
@@ -42,6 +45,8 @@ function buildPlayerContainers(parent, data) {
         timerange.innerHTML = "<b>Availability: </b>" + json.timerange
         
         //  Assemble the child div
+        child.appendChild(seed)
+
         profileContainer.appendChild(img);
         profileContainer.appendChild(username);
         profileContainer.appendChild(rank);
