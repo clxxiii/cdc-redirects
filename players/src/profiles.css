@@ -113,3 +113,7 @@ section, section div {
     top: 10;
     left: 10;
 }
+
+.out-of-rank {
+    filter: brightness(0.75) grayscale(1);
+}

@@ -1,5 +1,6 @@
 function buildPlayerContainers(parent, data) {
     parent.innerHTML = "";
+    let playersOutOfRank = 0;
     for (i = 0; i < data.length; i++) {
 
         let json = data[i]
@@ -32,10 +33,20 @@ function buildPlayerContainers(parent, data) {
         statsContainer.classList.add("stats")
         seed.classList.add("seed")
         
+        // Format div based on player data
+        if (json.rank > 300000 | json.rank < 85000) {
+            child.classList.add("out-of-rank")
+            seed.innerHTML = "-"
+            playersOutOfRank++;
+        }
+        else {
+            seed.innerHTML = (i + 1) - playersOutOfRank;
+        }
+        
         // Assign div content to variables
         let rankText = json.rank;
-        seed.innerHTML = i + 1;
         console.log()
+        
         img.src = "http://s.ppy.sh/a/" + json.id
         username.innerHTML = json.username
         rank.innerHTML = "#" + rankText.toLocaleString()
