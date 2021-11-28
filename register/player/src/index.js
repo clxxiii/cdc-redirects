@@ -38,7 +38,6 @@ function OnInput() {
   }
   else {
     this.classList.remove("empty");
-    console.log(areAllFieldsComplete())
     if( areAllFieldsComplete() ) {
       document.getElementById("submit").classList.remove("closed")
     }
