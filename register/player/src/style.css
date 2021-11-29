@@ -207,3 +207,7 @@ button {
   transform: scale(0.9);
   opacity: 0.8;
 }
+
+#error {
+  color:#FFBBBB
+}
