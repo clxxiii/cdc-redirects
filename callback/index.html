@@ -1,0 +1,15 @@
+<script>
+    let queryString = window.location.search;
+    let urlParams = new URLSearchParams(queryString);
+
+    getUserData();
+
+    async function getUserData() {
+        let response = await fetch("http://127.0.0.1:8080/?redirect_uri=https://cdc.clxxiii.dev/callback&code=" + urlParams.get("code"), {
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+        console.log(await response.json())
+    }
+</script>
